@@ -1,0 +1,94 @@
+<!--nav导航栏-->
+<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom shadow-sm fixed-top">
+    <a class="navbar-brand  font-weight-bold ml-5" href="../index.html">图书管理系统<span class="sr-only">图书管理系统</span></a>
+    <!--适配下的按钮、找到navbar所在的div将该div内容进行显示-->
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle mav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <!-- 各导航内容-->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <!--下拉列表-->
+                <a class="nav-link dropdown-toggle" href="#" id="navdropdownManage" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">图书管理</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="./bManage/ManageAll.html">全部书库</a>
+                    <a class="dropdown-item" href="./bManage/ManageNew.html">新书管理</a>
+                    <a class="dropdown-item" href="./bManage/ManageOld.html">旧书管理</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navdropdownInfo" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">资讯</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="#">新书资讯</a>
+                    <a class="dropdown-item" href="#">图书资讯</a>
+                    <a class="dropdown-item" href="#">自习室资讯</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navdropdownMy" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">我的</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="#">借阅与归还</a>
+                    <a class="dropdown-item" href="#">信息</a>
+                    <a class="dropdown-item" href="#">关注</a>
+                    <a class="dropdown-item" href="#">评价</a>
+                    <a class="dropdown-item" href="#">历史</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navdropdownFeedback" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">反馈</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="#">学院反馈</a>
+                    <a class="dropdown-item" href="#">管理员反馈</a>
+                    <a class="dropdown-item" href="#">图书反馈</a>
+                </div>
+            </li>
+        </ul>
+        <!--徽章 信息提示-->
+        <button type="button" class="btn btn-outline-dark btn-sm ml-auto">
+            信息 <span class="badge badge-dark">9</span>
+            <span class="sr-only">unread messages</span>
+        </button>
+        <!--头像-->
+        <figure style="width: 30px;height: 30px;" class="mt-2 mb-2 ml-2" id="myfigure">
+            <img class="mb-3 rounded-circle shadow " id="myImage" src="../static/images/login_logo.jpg " alt="我"
+                 width="30" height="30">
+        </figure>
+    </div>
+
+</nav>
+
+<script>
+    $("#myImage").hover(function (){
+        $(this).addClass("imagerotate")
+      },
+      function (){
+        $(this).removeClass("imagerotate")
+      });
+    let onResize = function() {
+      // apply dynamic padding at the top of the body according to the fixed navbar height
+      $("body").css("margin-top", $(".navbar").height()+18);
+    };
+
+    // attach the function to the window resize event
+    $(window).resize(onResize);
+
+    // call it also when the page is ready after load or reload
+    $(function() {
+      onResize();
+    });
+
+
+
+</script>
+
+<script id="ribbon" size="150" alpha='0.3' zIndex="-2" src="../static/js/canvas-ribbon.min.js"></script>
