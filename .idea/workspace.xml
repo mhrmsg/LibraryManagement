@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25603ed9-871d-49a8-ab29-8ecbe3f39924" name="Default Changelist" comment="图书管理系统，&#10;前端Bootstrap&#10;已完成图书管理项" />
+    <list default="true" id="25603ed9-871d-49a8-ab29-8ecbe3f39924" name="Default Changelist" comment="图书管理系统，&#10;前端Bootstrap&#10;已完成图书管理项">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bInfo/InfoNew.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/bInfo/InfoNew.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/header.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +57,7 @@
       <workItem from="1605605766585" duration="11181000" />
       <workItem from="1605674259438" duration="29352000" />
       <workItem from="1605850682312" duration="19194000" />
-      <workItem from="1605929731498" duration="23131000" />
+      <workItem from="1605929731498" duration="28663000" />
     </task>
     <task id="LOCAL-00001" summary="图书管理系统，&#10;前端Bootstrap&#10;已完成图书管理项">
       <created>1606048893500</created>
@@ -69,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606048952449</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="图书管理系统，&#10;前端Bootstrap&#10;已完成图书管理项">
+      <created>1606049305450</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606049305450</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +91,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="图书管理系统，&#10;前端Bootstrap&#10;已完成图书管理项" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="504" y="235" key="#Notifications" timestamp="1606049265400">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="504" y="235" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1606049265400" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606043144065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -88,6 +103,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606048708936" />
+    <state x="608" y="310" key="Github.ShareDialog" timestamp="1606049249838">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="608" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1606049249838" />
     <state x="270" y="57" key="SettingsEditor" timestamp="1606048723024">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
