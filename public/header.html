@@ -25,9 +25,8 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navdropdownInfo" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">资讯</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="./bInfo/InfoNew.html">新书资讯</a>
-                    <a class="dropdown-item" href="#">图书资讯</a>
-                    <a class="dropdown-item" href="#">自习室资讯</a>
+                    <a class="dropdown-item" href="bInfo/InfoBook.html">图书资讯</a>
+                    <a class="dropdown-item" href="bInfo/InfoStudyRoom.html">自习室资讯</a>
                 </div>
             </li>
 
@@ -60,15 +59,17 @@
         </button>
         <!--头像-->
         <figure style="width: 30px;height: 30px;" class="mt-2 mb-2 ml-2" id="myfigure">
-            <img class="mb-3 rounded-circle shadow " id="myImage" src="../static/images/login_logo.jpg " alt="我"
+            <a  href="./bMy/MyIndex.html">
+            <img class="mb-3 rounded-circle shadow myImage"  src="../static/images/login_logo.jpg " alt="我"
                  width="30" height="30">
+            </a>
         </figure>
     </div>
 
 </nav>
 
 <script>
-    $("#myImage").hover(function (){
+    $(".myImage").hover(function (){
         $(this).addClass("imagerotate")
       },
       function (){
@@ -81,12 +82,14 @@
 
     // attach the function to the window resize event
     $(window).resize(onResize);
-
     // call it also when the page is ready after load or reload
+
+
+
     $(function() {
       onResize();
-    });
 
+    });
 
 
 </script>

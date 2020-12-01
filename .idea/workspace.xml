@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:mhr" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="25603ed9-871d-49a8-ab29-8ecbe3f39924" name="Default Changelist" comment="图书管理系统，&#10;前端Bootstrap&#10;已完成图书管理项">
+    <list default="true" id="25603ed9-871d-49a8-ab29-8ecbe3f39924" name="Default Changelist" comment="小更改">
+      <change afterPath="$PROJECT_DIR$/public/bMy/MyIndex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/new.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bInfo/InfoNew.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/bInfo/InfoNew.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bInfo/InfoBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/bInfo/InfoBook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bInfo/InfoNew.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bInfo/InfoStudyRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/bInfo/InfoStudyRoom.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -57,7 +80,13 @@
       <workItem from="1605605766585" duration="11181000" />
       <workItem from="1605674259438" duration="29352000" />
       <workItem from="1605850682312" duration="19194000" />
-      <workItem from="1605929731498" duration="28663000" />
+      <workItem from="1605929731498" duration="28759000" />
+      <workItem from="1606200265631" duration="11816000" />
+      <workItem from="1606796510619" duration="11000" />
+      <workItem from="1606796606821" duration="4000" />
+      <workItem from="1606796630617" duration="9000" />
+      <workItem from="1606796653647" duration="17000" />
+      <workItem from="1606797025332" duration="8336000" />
     </task>
     <task id="LOCAL-00001" summary="图书管理系统，&#10;前端Bootstrap&#10;已完成图书管理项">
       <created>1606048893500</created>
@@ -80,15 +109,34 @@
       <option name="project" value="LOCAL" />
       <updated>1606049305450</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="小更改">
+      <created>1606134342536</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606134342536</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="图书管理系统，&#10;前端Bootstrap&#10;已完成图书管理项" />
-    <option name="LAST_COMMIT_MESSAGE" value="图书管理系统，&#10;前端Bootstrap&#10;已完成图书管理项" />
+    <MESSAGE value="小更改" />
+    <option name="LAST_COMMIT_MESSAGE" value="小更改" />
   </component>
   <component name="WindowStateProjectService">
     <state x="504" y="235" key="#Notifications" timestamp="1606049265400">
