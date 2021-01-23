@@ -41,7 +41,7 @@
     <input type="password" id="inputPassword" name="pwd" class="form-control" placeholder="密码" required>
     <div class="checkbox mb-3">
         <label class="mr-3">
-            <input type="checkbox" value="remember-me"> 一周之内免密登录
+            <input type="checkbox" value="remember-me" name="remember-me"> 一周之内免密登录
             <a href="#" class="text-muted ml-2">忘记了</a>
             <span style="color: red">${msg}</span>
         </label>

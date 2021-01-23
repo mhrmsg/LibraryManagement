@@ -22,3 +22,5 @@ $(".card-img-top").hover(function () {
   $(this).removeClass("shadow");
 });
 
+
+

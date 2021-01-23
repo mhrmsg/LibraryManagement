@@ -12,20 +12,42 @@ public class UserBean {
     private String u_tag;
     private String u_birth;
     private String s_id;
+    private String u_msg;
 
-    public UserBean(int u_id, String u_name, String u_paasword, String u_email, String u_phone, String u_sex, String u_address, String u_birth, String s_id) {
+    public UserBean(int u_id, String u_name, String u_paasword, String u_email, String u_phone, String u_comment, String u_sex, String u_address, String u_tag, String u_birth, String s_id, String u_msg) {
         this.u_id = u_id;
         this.u_name = u_name;
         this.u_paasword = u_paasword;
         this.u_email = u_email;
         this.u_phone = u_phone;
+        this.u_comment = u_comment;
         this.u_sex = u_sex;
         this.u_address = u_address;
+        this.u_tag = u_tag;
         this.u_birth = u_birth;
         this.s_id = s_id;
+        this.u_msg = u_msg;
     }
 
     public UserBean() {
+    }
+
+    @Override
+    public String toString() {
+        return "UserBean{" +
+                "u_id=" + u_id +
+                ", u_name='" + u_name + '\'' +
+                ", u_paasword='" + u_paasword + '\'' +
+                ", u_email='" + u_email + '\'' +
+                ", u_phone='" + u_phone + '\'' +
+                ", u_comment='" + u_comment + '\'' +
+                ", u_sex='" + u_sex + '\'' +
+                ", u_address='" + u_address + '\'' +
+                ", u_tag='" + u_tag + '\'' +
+                ", u_birth='" + u_birth + '\'' +
+                ", s_id='" + s_id + '\'' +
+                ", u_msg='" + u_msg + '\'' +
+                '}';
     }
 
     public int getU_id() {
@@ -116,20 +138,11 @@ public class UserBean {
         this.s_id = s_id;
     }
 
-    @Override
-    public String toString() {
-        return "UserBean{" +
-                "u_id=" + u_id +
-                ", u_name='" + u_name + '\'' +
-                ", u_paasword='" + u_paasword + '\'' +
-                ", u_email='" + u_email + '\'' +
-                ", u_phone='" + u_phone + '\'' +
-                ", u_comment='" + u_comment + '\'' +
-                ", u_sex='" + u_sex + '\'' +
-                ", u_address='" + u_address + '\'' +
-                ", u_tag='" + u_tag + '\'' +
-                ", u_birth='" + u_birth + '\'' +
-                ", s_id='" + s_id + '\'' +
-                '}';
+    public String getU_msg() {
+        return u_msg;
+    }
+
+    public void setU_msg(String u_msg) {
+        this.u_msg = u_msg;
     }
 }

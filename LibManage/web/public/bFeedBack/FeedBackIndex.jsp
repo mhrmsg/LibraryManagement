@@ -28,6 +28,7 @@
 <main class="d-flex">
     <div class="container mt-5 border border-light-50 shadow-lg text-center">
         <div class="p-2 text-center">
+
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">学院反馈</span>

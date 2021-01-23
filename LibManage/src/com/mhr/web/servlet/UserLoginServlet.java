@@ -4,9 +4,11 @@ import com.mhr.entiy.UserBean;
 import com.mhr.service.LoginSerivce;
 import com.mhr.service.impl.LoginServiceImpl;
 
+import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.net.HttpCookie;
 
+@WebServlet(name = "UserLoginServlet",value = "/public/login")
 public class UserLoginServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         doGet(request,response);
@@ -16,6 +18,15 @@ public class UserLoginServlet extends javax.servlet.http.HttpServlet {
         String uname = request.getParameter("uname");
         String pwd = request.getParameter("pwd");
         LoginSerivce loginSerivce = new LoginServiceImpl();
+
+        if(null != request.getParameter("remember-me")) {
+            //设置session 7天后失效
+            request.getSession().setMaxInactiveInterval(604800);
+        }else {
+            //设置session 1天后失效
+            request.getSession().setMaxInactiveInterval(86400 );
+        }
+
         //checkresult 从数据库传来的用户数据
         Object checkresult = null;
         try {
@@ -37,6 +48,7 @@ public class UserLoginServlet extends javax.servlet.http.HttpServlet {
                 request.getSession().setAttribute("admin",checkresult);
             }
         }
-        request.getRequestDispatcher("index.jsp").forward(request,response);
+//        request.getRequestDispatcher("index.jsp").forward(request,response);
+        response.sendRedirect(request.getContextPath()+"/public/index.jsp");
     }
 }

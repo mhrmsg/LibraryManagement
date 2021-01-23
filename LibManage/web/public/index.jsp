@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -186,55 +187,8 @@
                 </form>
             </div>
 
-            <div class="card-body row ml-2  mt-3"  >
-                <div class="card col-md-2 p-1  text-center ml-4  border-0"   >
-                    <img class="card-img-top w-50 m-auto" src="${pageContext.request.contextPath}/static/images/book.jfif" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"><a class="text-dark" href="#">Card title</a></h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-
-                <div class="card col-md-2 p-1 text-center ml-4  border-0">
-                    <img class="card-img-top w-50 m-auto" src="${pageContext.request.contextPath}/static/images/book.jfif" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"><a class="text-dark" href="#">Card title</a></h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-
-                <div class="card col-md-2 p-1 text-center ml-4  border-0" >
-                    <img class="card-img-top w-50 m-auto" src="${pageContext.request.contextPath}/static/images/book.jfif" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"><a class="text-dark" href="#">Card title</a></h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card col-md-2 p-1  text-center ml-4  border-0">
-                    <img class="card-img-top w-50 m-auto" src="${pageContext.request.contextPath}/static/images/book.jfif" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"><a class="text-dark" href="#">Card title</a></h5>
-                        <p class="card-text" >This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card col-md-2 p-1  text-center ml-4  border-0 ">
-                    <img class="card-img-top w-50 m-auto" src="${pageContext.request.contextPath}/static/images/book.jfif" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"><a class="text-dark" href="#">Card title</a></h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-
+            <div class="card-body row ml-2  mt-3" id="refreshContent" >
+<%--content--%>
             </div>
         </div>
 
@@ -248,6 +202,40 @@
 <script src="${pageContext.request.contextPath}/static/js/jquery-3.4.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/bootstrap.bundle.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/main.js"></script>
+
+<%--ajax随机换一批--%>
+<script>
+    window.onload = function (){
+        $("#refreshImg").click();
+    };
+
+let num = 5 , name = null;
+$("#refreshImg").click(function (){
+    $.ajax({
+        url: "index?method=searchBook",
+        type: "POST",
+        data: {"num": num, "name": name},
+        dataType: 'json',
+        success: function (data) {
+            var refreshContent = "";
+            $.each(data,function (index,val){
+                refreshContent += "<div class=\"card col-md-2 p-1  text-center ml-4  border-0\"   >\n" +
+                    "                        <img class=\"card-img-top w-50 m-auto\" src=\"${pageContext.request.contextPath}/static/images/book.jfif\" alt=\"Card image cap\">\n" +
+                    "                        <div class=\"card-body\">\n" +
+                    "                            <h5 class=\"card-title\"><a class=\"text-dark\" href=\"#\">"+val.b_name+"</a></h5>\n" +
+                    "                            <p class=\"card-text\">"+val.b_info+"</p>\n" +
+                    "                            <p class=\"card-text\"><small class=\"text-muted\">"+val.b_pdate+"</small></p>\n" +
+                    "                        </div>\n" +
+                    "                    </div>"
+            });
+            $("#refreshContent").html(refreshContent);
+        }, error: function () {
+            console.log(this.url);
+            alert("请求失败");
+        }
+    })
+});
+</script>
 
 </body>
 </html>
