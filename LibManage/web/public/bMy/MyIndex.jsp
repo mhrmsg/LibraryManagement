@@ -45,7 +45,6 @@
 
             <div class="card mt-5 ml-4 p-2 bg-white shadow-sm myCard" style="width: 18rem;" >
                 <div class="card-body">
-
                     <ul class="list-group">
                         <li class="list-group-item border-0" >借出与归还</li>
                         <li class="list-group-item list-group-item-action" >借出与归还 <a href="#" class="badge badge-danger">逾期</a></li>
