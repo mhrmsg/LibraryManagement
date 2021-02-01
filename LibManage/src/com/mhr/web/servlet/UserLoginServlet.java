@@ -48,7 +48,7 @@ public class UserLoginServlet extends javax.servlet.http.HttpServlet {
                 request.getSession().setAttribute("admin",checkresult);
             }
         }
-//        request.getRequestDispatcher("index.jsp").forward(request,response);
+//      request.getRequestDispatcher("index.jsp").forward(request,response);
         response.sendRedirect(request.getContextPath()+"/public/index.jsp");
     }
 }

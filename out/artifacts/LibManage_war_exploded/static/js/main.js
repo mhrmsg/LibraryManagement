@@ -16,11 +16,4 @@ $("#refreshBook").on("mousedown", function () {
 
 
 
-$(".card-img-top").hover(function () {
-  $(this).addClass("shadow");
-}, function () {
-  $(this).removeClass("shadow");
-});
-
-
 

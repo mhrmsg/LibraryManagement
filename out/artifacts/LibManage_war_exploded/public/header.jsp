@@ -37,7 +37,7 @@
 
 
             <li class="nav-item ">
-                <a class="nav-link " href="${pageContext.request.contextPath}/public/bMy/MyIndex.jsp" id="navdropdownMy" >我的</a>
+                <a class="nav-link " href="${pageContext.request.contextPath}/public/index?method=userIndex" id="navdropdownMy" >我的</a>
             </li>
 
         </ul>
@@ -48,7 +48,7 @@
         </button>
         <!--头像-->
         <figure style="width: 30px;height: 30px;" class="mt-2 mb-2 ml-2" id="myfigure">
-            <a  href="${pageContext.request.contextPath}/public/bMy/MyIndex.jsp">
+            <a  href="${pageContext.request.contextPath}/public/index?method=userIndex">
             <img class="mb-3 rounded-circle shadow myImage" src="${pageContext.request.contextPath}/static/images/login_logo.jpg " alt="我"
                  width="30" height="30">
             </a>
