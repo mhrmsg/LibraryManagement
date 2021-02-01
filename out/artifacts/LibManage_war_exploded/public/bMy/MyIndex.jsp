@@ -36,16 +36,14 @@
                          height="72">
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">User</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">${user.u_name}</h5>
+                    <p class="card-text">${user.u_comment}</p>
+                    <a href="${pageContext.request.contextPath}/public/index.jsp" class="btn btn-primary">Go index</a>
                 </div>
             </div>
 
             <div class="card mt-5 ml-4 p-2 bg-white shadow-sm myCard" style="width: 18rem;" >
                 <div class="card-body">
-
                     <ul class="list-group">
                         <li class="list-group-item border-0" >借出与归还</li>
                         <li class="list-group-item list-group-item-action" >借出与归还 <a href="#" class="badge badge-danger">逾期</a></li>
@@ -100,6 +98,7 @@
         </div>
 <!--留言-->
         <div class="col-md-2">
+
             <div class="card mt-5 p-2 bg-white shadow-sm myCard  " >
                 <div class="row no-gutters   ">
                     <div class="col-md-9">
@@ -110,6 +109,21 @@
                     </div>
                 </div>
             </div>
+
+            <div class="card mt-5  bg-white shadow-sm myCard  text-center" >
+                <div class="row no-gutters">
+                        <div class="card-body">
+                            <form action="">
+
+                            <h5 class="card-title">留言标题<input type="text" class="form-control" aria-label="留言"></h5>
+                            <p class="card-text">内容<textarea class="form-control" aria-label="comment"></textarea>
+                            </p>
+                                <button type="submit" class="btn btn-primary">提交</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+
         </div>
 <!--右侧栏结束-->
     </div>

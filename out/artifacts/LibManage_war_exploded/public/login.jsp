@@ -31,17 +31,19 @@
 
 <body class="text-center">
 
-<form class="form-signin">
+<form class="form-signin" action="login" method="post">
+
     <img class="mb-3 rounded-circle shadow " src="${pageContext.request.contextPath}/static/images/login_logo.jpg " alt="Logo" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">账号登录</h1>
-    <label for="inputEmail" class="sr-only">邮箱</label>
-    <input type="text" id="inputEmail" class="form-control" placeholder="邮箱|用户名|手机号" required autofocus>
+    <label for="uname" class="sr-only">邮箱</label>
+    <input type="text" id="uname" name="uname" class="form-control" placeholder="邮箱|用户名|手机号" required autofocus>
     <label for="inputPassword" class="sr-only">密码</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+    <input type="password" id="inputPassword" name="pwd" class="form-control" placeholder="密码" required>
     <div class="checkbox mb-3">
-        <label class="mr-5">
-            <input type="checkbox" value="remember-me"> 一周之内免密登录
+        <label class="mr-3">
+            <input type="checkbox" value="remember-me" name="remember-me"> 一周之内免密登录
             <a href="#" class="text-muted ml-2">忘记了</a>
+            <span style="color: red">${msg}</span>
         </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">登 入</button>
