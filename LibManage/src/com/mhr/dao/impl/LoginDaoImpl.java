@@ -19,7 +19,6 @@ public class LoginDaoImpl implements LoginDao {
         String sql = "select * from user where  (u_name=? or u_id=? or u_email=? or u_phone=?) and u_password=?";
         String[] params = {uname,uname,uname,uname,pwd};
         UserBean user = queryRunner.query(sql, new BeanHandler<UserBean>(UserBean.class), params);
-        Integer query = (Integer) queryRunner.query(sql, new ScalarHandler(),params);
         if(null == user){
             String[] adminParams = {uname,uname,pwd};
             sql = "select * from admin where  (admin_uname=? or admin_id=?) and admin_password=?";

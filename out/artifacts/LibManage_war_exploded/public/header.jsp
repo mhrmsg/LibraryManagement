@@ -42,9 +42,8 @@
 
         </ul>
         <!--徽章 信息提示-->
-        <button type="button" class="btn btn-outline-dark btn-sm ml-auto">
-            信息 <span class="badge badge-dark">9</span>
-            <span class="sr-only">unread messages</span>
+        <button type="button" class="btn btn-outline-dark btn-sm ml-auto logout" >
+            <a href="${pageContext.request.contextPath}/public/index?method=logout" class="text-dark">退出</a>
         </button>
         <!--头像-->
         <figure style="width: 30px;height: 30px;" class="mt-2 mb-2 ml-2" id="myfigure">
@@ -74,11 +73,11 @@
     // call it also when the page is ready after load or reload
 
 
-
     $(function() {
       onResize();
-
     });
+
+
 
 
 </script>

@@ -68,6 +68,7 @@
 
             </dl>
         </div>
+
 <%--搜索--%>
         <div class="row  border-dark  p-4 w-100 text-center  border-dark">
             <form action="${pageContext.request.contextPath}/public/index?method=searchByCondition" method="post">
@@ -146,8 +147,8 @@
                               &nbsp; &nbsp;&nbsp; 标签:&nbsp; <span class="">${i.u_tag}</span>
                                 </span>
                                 </button>
-                                <!--修改信息-->
-                                <div id="adminAlter" class="">
+<!--修改书籍信息-->
+                                <div id="adminAlter${idxStatus.index}" class="adminLimit">
                                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#adminAlterData${idxStatus.index}">
                                         修改书籍信息
                                     </button>
@@ -155,7 +156,7 @@
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="modal${idxStatus.index}Title">Modal title</h5>
+                                                    <h5 class="modal-title" id="modal${idxStatus.index}Title">修改书籍信息</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -163,37 +164,58 @@
                                                 <div class="modal-body" style="font-size: 18px">
                                                     <form>
                                                         <div class="form-group" >
-                                                            <label for="bNameAlter" class="col-form-label">图书名</label>
-                                                            <input type="text" class="form-control" id="bNameAlter" aria-describedby="bNameAlter"
+                                                            <input type="hidden" class="form-control abid"  value="${i.b_id}"
+                                                                   >
+
+                                                            <label for="bNameAlter${idxStatus.index}" class="col-form-label">图书名</label>
+                                                            <input type="text" class="form-control abname" id="bNameAlter${idxStatus.index}" aria-describedby="bNameAlter" value="${i.b_name}"
                                                                    placeholder="图书名">
 
-                                                            <label for="bCategoryAlter" class="col-form-label">类别名</label>
-                                                            <input type="text" class="form-control" id="bCategoryAlter" aria-describedby="bCategoryAlter"
+                                                            <label for="bCategoryAlter${idxStatus.index}" class="col-form-label">类别号</label>
+                                                            <input type="text" class="form-control abcid" id="bCategoryAlter${idxStatus.index}" aria-describedby="bCategoryAlter" value="${i.c_id}"
                                                                    placeholder="类别">
 
-                                                            <label for="bAutorAlter" class="col-form-label">类别名</label>
-                                                            <input type="text" class="form-control" id="bAutorAlter" aria-describedby="bAutorAlter"
+                                                            <label for="bAutorAlter${idxStatus.index}" class="col-form-label">作者</label>
+                                                            <input type="text" class="form-control abauthor" id="bAutorAlter${idxStatus.index}" aria-describedby="bAutorAlter" value="${i.b_author}"
                                                                    placeholder="作者">
 
-                                                            <label for="bPublishAlter" class="col-form-label">类别名</label>
-                                                            <input type="text" class="form-control" id="bPublishAlter" aria-describedby="bPublishAlter"
+                                                            <label for="bPublishAlter${idxStatus.index}" class="col-form-label">出版社</label>
+                                                            <input type="text" class="form-control abpublish" id="bPublishAlter${idxStatus.index}" aria-describedby="bPublishAlter" value="${i.b_publish}"
                                                                    placeholder="出版社">
-                                                            <div class="container">
-                                                                <label for="bTagAlter${idxStatus.index}" class="col-form-label">Tag</label>
-                                                                <ul class="list-inline " id="bTagAlter${idxStatus.index}">
-                                                                    <li class="list-inline-item m-1 border p-2 d-inline-block ">
-                                                                        <span class="my-auto">aaaaaaa</span>
-                                                                        <button type="button" class="btn btn-outline-danger border-0 ">X</button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+
+                                                            <label for="bInfoAlter${idxStatus.index}" class="col-form-label">简介</label>
+                                                            <input type="text" class="form-control abinfo" id="bInfoAlter${idxStatus.index}" aria-describedby="bInfoAlter" value="${i.b_info}"
+                                                                   placeholder="简介">
+
+                                                            <label for="blanAlter${idxStatus.index}" class="col-form-label">语种</label>
+                                                            <input type="text" class="form-control ablan" id="blanAlter${idxStatus.index}" aria-describedby="blanAlter" value="${i.b_language}"
+                                                                   placeholder="语种">
+
+
+                                                            <label for="bpriceAlter${idxStatus.index}" class="col-form-label">价格</label>
+                                                            <input type="text" class="form-control abprice" id="bpriceAlter${idxStatus.index}" aria-describedby="bpriceAlter" value="${i.b_price}"
+                                                                   placeholder="介个">
+
+                                                            <label for="bdateAlter${idxStatus.index}" class="col-form-label">出版日期</label>
+                                                            <input type="date" class="form-control abdate" id="bdateAlter${idxStatus.index}" aria-describedby="bdateAlter" value="${i.b_pdate}"
+                                                                   placeholder="出版日期">
+
+<%--                                                            <div class="container">--%>
+<%--                                                                <label for="bTagAlter${idxStatus.index}" class="col-form-label">Tag</label>--%>
+<%--                                                                <ul class="list-inline " id="bTagAlter${idxStatus.index}">--%>
+<%--                                                                    <li class="list-inline-item m-1 border p-2 d-inline-block ">--%>
+<%--                                                                        <span class="my-auto">aaaaaaa</span>--%>
+<%--                                                                        <button type="button" class="btn btn-outline-danger border-0 ">X</button>--%>
+<%--                                                                    </li>--%>
+<%--                                                                </ul>--%>
+<%--                                                            </div>--%>
                                                         </div>
 
                                                     </form>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                                    <button type="button" class="btn btn-primary absave" data-dismiss="modal">保存</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -213,20 +235,14 @@
                                         <a >${i.b_info}</a>
 
                                     </div>
-                                    <a href="#"> <img src="${pageContext.request.contextPath}/static/images/Go.png" width="25" height="25" class=""></a>
+                                    <a href="${pageContext.request.contextPath}/public/index?method=searchByBid&b_id=${i.b_id}"> <img src="${pageContext.request.contextPath}/static/images/Go.png" width="25" height="25" class=""></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </c:forEach>
-
-
-
-
-
             </div>
         </div>
-
     </div>
 </main>
 </div>
@@ -277,6 +293,40 @@
       })
   }
 
+  //获得要修改书籍的信息
+
+
+  //管理员功能
+  $(".adminLimit").click(function (e){
+      if ("${admin}" == "" || "${admin}" == null) {
+          alert("非管理员不能修改信息");
+          e.stopPropagation();
+      }
+  });
+
+  $(".absave").click(function (){
+      console.log(1);
+      let bid = $(".abid").val();
+      let bname = $(".abname").val();
+      let bcid = $(".abcid").val();
+      let bauthor = $(".abauthor").val();
+      let publish = $(".abpublish").val();
+      let info = $(".abinfo").val();
+      let lan = $(".ablan").val();
+      let bdate = $(".abdate").val();
+      let abprice = $(".abprice").val();
+      $.ajax({
+          url: "${pageContext.request.contextPath}/public/admin?method=updateBook",
+          type: "POST",
+          data: {"b_id":bid,"b_name":bname,"c_id":bcid,"b_author":bauthor,"b_publish":publish,"b_info":info,"b_language":lan,"b_pdate":bdate,"b_price":abprice},
+          dataType: "text",
+          success: function (data) {
+            alert(data);
+          }, error: function () {
+              alert("修改失败");
+          }
+      })
+  });
 
 </script>
 </body>

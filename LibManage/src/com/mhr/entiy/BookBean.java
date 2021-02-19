@@ -3,7 +3,7 @@ package com.mhr.entiy;
 import java.util.Date;
 
 public class BookBean {
-    private String b_id;    //图书ID
+    private int b_id;    //图书ID
     private String b_name;  //图书名
     private String b_author;    //作者
     private String b_publish;   //图书信息
@@ -19,7 +19,7 @@ public class BookBean {
     private BPublicBean bPublicBean;  //书籍数据
 
 
-    public BookBean(String b_id, String b_name, String b_author, String b_publish, String b_info, String b_language, double b_price, String b_pdate, int b_num, int c_id) {
+    public BookBean(int b_id, String b_name, String b_author, String b_publish, String b_info, String b_language, double b_price, String b_pdate, int b_num, int c_id) {
         this.b_id = b_id;
         this.b_name = b_name;
         this.b_author = b_author;
@@ -35,11 +35,11 @@ public class BookBean {
     public BookBean() {
     }
 
-    public String getB_id() {
+    public int getB_id() {
         return b_id;
     }
 
-    public void setB_id(String b_id) {
+    public void setB_id(int b_id) {
         this.b_id = b_id;
     }
 

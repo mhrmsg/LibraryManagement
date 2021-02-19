@@ -96,8 +96,8 @@
                              height="28">
                     </div>
 
-                    <form class="form-inline float-md-right  mt-auto mb-auto ">
-                        <input class="form-control mr-sm-2" type="text" placeholder="搜索(书名)" aria-label="搜索(书名)">
+                    <form class="form-inline float-md-right  mt-auto mb-auto" action="${pageContext.request.contextPath}/public/index?method=searchByCondition" method="post">
+                        <input class="form-control mr-sm-2" type="text" placeholder="搜索(书名)" name="b_name" aria-label="搜索(书名)">
                         <button class="btn btn-outline-dark" type="submit">Search</button>
                     </form>
                 </div>
@@ -145,7 +145,7 @@
                     refreshContent += "<div class=\"card col-md-2 p-1  text-center ml-4  border-0\"   >\n" +
                         "                        <img class=\"card-img-top w-50 m-auto\" src=\"${pageContext.request.contextPath}/static/images/book.jfif\" alt=\"Card image cap\">\n" +
                         "                        <div class=\"card-body\">\n" +
-                        "                            <h5 class=\"card-title\"><a class=\"text-dark\" href=\"${pageContext.request.contextPath}/public/ABook.jsp?b_id="+val.b_id+"\">" + val.b_name + "</a></h5>\n" +
+                        "                            <h5 class=\"card-title\"><a class=\"text-dark\" href=\"${pageContext.request.contextPath}/public/index?method=searchByBid&b_id="+val.b_id+"\">" + val.b_name + "</a></h5>\n" +
                         "                            <p class=\"card-text\">" + val.b_info + "</p>\n" +
                         "                            <p class=\"card-text\"><small class=\"text-muted\">" + val.b_pdate + "</small></p>\n" +
                         "                        </div>\n" +

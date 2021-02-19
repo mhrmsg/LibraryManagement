@@ -1,7 +1,7 @@
 package com.mhr.entiy;
 
 public class UserBean {
-    private int u_id;
+    private String u_id;
     private String u_name;
     private String u_paasword;
     private String u_email;
@@ -14,7 +14,7 @@ public class UserBean {
     private String s_id;
     private String u_msg;
 
-    public UserBean(int u_id, String u_name, String u_paasword, String u_email, String u_phone, String u_comment, String u_sex, String u_address, String u_tag, String u_birth, String s_id, String u_msg) {
+    public UserBean(String u_id, String u_name, String u_paasword, String u_email, String u_phone, String u_comment, String u_sex, String u_address, String u_tag, String u_birth, String s_id, String u_msg) {
         this.u_id = u_id;
         this.u_name = u_name;
         this.u_paasword = u_paasword;
@@ -50,11 +50,11 @@ public class UserBean {
                 '}';
     }
 
-    public int getU_id() {
+    public String getU_id() {
         return u_id;
     }
 
-    public void setU_id(int u_id) {
+    public void setU_id(String u_id) {
         this.u_id = u_id;
     }
 
